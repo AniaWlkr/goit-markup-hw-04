@@ -185,19 +185,18 @@ address {
 /* ========== End Header ========== */
 
 /* ========== Hero ========== */
-.overlay {
+
+.hero {
   height: 600px;
   max-width: 1600px;
   margin: 0 auto;
+  padding: 200px 0;
 
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-}
 
-.hero {
-  padding: 200px 0;
   text-align: center;
 }
 
@@ -249,25 +248,36 @@ address {
   margin-right: 30px;
 }
 
-.advantages-icon-box {
+.advantages-list-item::before {
+  display: block;
+  content: "";
+
   height: 120px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-bottom: 30px;
-
-  border-radius: 4px;
-  background: var(--advantages-icon-bgc);
+  background-color: var(--our-team-section-bgc);
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.advantages-icon {
-  width: 70px;
-  height: 70px;
+.advantages-list-item.antenna::before {
+  background-image: url(../images/advantages/antenna.svg);
+}
+
+.advantages-list-item.clock::before {
+  background-image: url(../images/advantages/clock.svg);
+}
+
+.advantages-list-item.diagram::before {
+  background-image: url(../images/advantages/diagram.svg);
+}
+
+.advantages-list-item.astronaut::before {
+  background-image: url(../images/advantages/astronaut.svg);
 }
 
 .advantages-subtitle {
+  margin-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 700;
